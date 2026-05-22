@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hervelly Keila — Psicopedagoga Infantil em Domicílio | Mamanguape/PB</title>
+  <meta name="description" content="Atendimento psicopedagógico infantil em domicílio para crianças com dificuldades de aprendizagem, TEA, TDAH e TOD. Apoio acolhedor para crianças e famílias em Mamanguape/PB." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:     #FAF6F0;
+      --sage:      #EEF0E8;
+      --lilac:     #EDE6F2;
+      --babyblue:  #E4EEF3;
+      --terracota: #C25B3F;
+      --terracota-dark: #a84a32;
+      --dark:      #3B1F1A;
+      --gold:      #C9A84C;
+      --text:      #4A3728;
+      --muted:     #7a6a5c;
+      --card-bg:   #FFFFFF;
+      --border:    #E8DDD5;
+      --wa:        #25D366;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    ::selection { background: #f0d7c8; color: var(--dark); }
+
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 2rem; }
+
+    /* ── NAV ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 246, 240, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 1.05rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+    }
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d9a48b, var(--terracota));
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+    .logo-text { line-height: 1.15; }
+    .logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--dark);
+      font-weight: 600;
+    }
+    .logo-sub {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.93rem;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    nav ul a:hover { color: var(--terracota); }
+
+    .btn-primary {
+      background: var(--terracota);
+      color: #fff;
+      border: none;
+      padding: .8rem 1.5rem;
+      border-radius: 50px;
+      font-size: .92rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-family: inherit;
+    }
+    .btn-primary:hover { background: var(--terracota-dark); transform: translateY(-1px); }
+    .btn-primary svg { width: 17px; height: 17px; }
+
+    .btn-outline {
+      border: 1.5px solid var(--dark);
+      color: var(--dark);
+      padding: .75rem 1.5rem;
+      border-radius: 50px;
+      font-size: .92rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all .2s;
+      background: transparent;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .btn-outline:hover { background: var(--dark); color: #fff; }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.4rem;
+      color: var(--dark);
+    }
+    .menu-toggle svg { width: 24px; height: 24px; }
+
+    /* ── HERO ── */
+    #hero {
+      padding: 4.5rem 2rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 420px; height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #f0d7c8 0%, transparent 65%);
+      opacity: 0.55;
+      pointer-events: none;
+    }
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -120px;
+      width: 380px; height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--sage) 0%, transparent 65%);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      align-items: center;
+      gap: 4rem;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      border: 1.5px solid var(--border);
+      background: rgba(255,255,255,0.6);
+      border-radius: 50px;
+      padding: .42rem 1rem;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 1.6rem;
+    }
+    .hero-badge svg { width: 14px; height: 14px; stroke: var(--terracota); fill: none; stroke-width: 2; }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.3rem, 4.8vw, 3.6rem);
+      color: var(--dark);
+      line-height: 1.1;
+      margin-bottom: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    h1 .highlight {
+      color: var(--terracota);
+      font-style: italic;
+      font-weight: 400;
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text);
+      max-width: 480px;
+      margin-bottom: 1rem;
+      opacity: .92;
+    }
+    .hero-sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin-bottom: 2rem;
+    }
+    .hero-buttons { display: flex; gap: .8rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--terracota);
+      font-weight: 700;
+      display: block;
+      line-height: 1.1;
+    }
+    .stat-label { font-size: .78rem; color: var(--muted); margin-top: 0.2rem; }
+
+    .hero-image-wrap { position: relative; }
+    .hero-image-frame {
+      position: relative;
+      aspect-ratio: 4/5;
+      max-width: 460px;
+      margin-left: auto;
+    }
+    .hero-image-frame::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #e6cdb9, var(--sage));
+      transform: rotate(-3deg);
+    }
+    .hero-image-frame img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 24px;
+      transform: translate(8px, 8px);
+      box-shadow: 0 20px 50px rgba(59,31,26,0.18);
+    }
+    .hero-quote {
+      position: absolute;
+      bottom: 2.2rem;
+      left: -1.5rem;
+      background: #fff;
+      border-radius: 14px;
+      padding: 0.9rem 1.2rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,.1);
+      max-width: 220px;
+      font-size: .85rem;
+      color: var(--text);
+      font-style: italic;
+      z-index: 2;
+    }
+    .hero-quote-icon {
+      color: var(--terracota);
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: .3rem;
+      font-style: normal;
+    }
+    .hero-tag-card {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 1rem;
+      background: #fff;
+      border-radius: 14px;
+      padding: 0.7rem 1.1rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,.1);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      z-index: 3;
+      white-space: nowrap;
+    }
+    .hero-tag-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--sage);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-tag-icon svg { width: 16px; height: 16px; stroke: #5a7d4f; fill: none; stroke-width: 1.8; }
+    .hero-tag-text { line-height: 1.2; }
+    .hero-tag-eyebrow { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+    .hero-tag-title { font-size: 0.82rem; font-weight: 600; color: var(--dark); }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2rem;
+      margin-top: 1.8rem;
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+    .hero-trust span { display: inline-flex; align-items: center; gap: 0.5rem; }
+    .hero-trust svg { width: 16px; height: 16px; stroke: var(--terracota); fill: none; stroke-width: 1.8; }
+
+    /* ── SECTIONS ── */
+    section.alt { background: var(--sage); }
+    section.alt-cream { background: var(--cream); }
+    section.alt-lilac { background: var(--lilac); }
+    section { padding: 5.5rem 2rem; }
+    .section-inner { max-width: 1140px; margin: 0 auto; }
+    .section-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--terracota);
+      margin-bottom: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+    .section-label::before {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--terracota);
+      opacity: 0.5;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      color: var(--dark);
+      line-height: 1.12;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    h2 em { font-weight: 400; color: var(--terracota); }
+    .section-header { margin-bottom: 3.5rem; }
+    .section-header.center { text-align: center; max-width: 760px; margin-left: auto; margin-right: auto; }
+    .section-intro { font-size: 1.02rem; color: var(--text); opacity: .85; max-width: 620px; line-height: 1.7; }
+
+    /* ── PAIN ── */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
+      margin-top: 2.5rem;
+    }
+    .pain-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.2rem 1.3rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.92rem;
+    }
+    .pain-card::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--terracota);
+      flex-shrink: 0;
+      margin-top: 0.55rem;
+    }
+    .pain-closing {
+      margin-top: 2.5rem;
+      padding: 1.5rem 1.8rem;
+      background: #fff;
+      border-left: 3px solid var(--terracota);
+      border-radius: 12px;
+      max-width: 720px;
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    /* ── HOW IT HELPS ── */
+    .help-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .help-img-wrap {
+      position: relative;
+      aspect-ratio: 4/5;
+      max-width: 420px;
+    }
+    .help-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+      display: block;
+    }
+    .help-quote-card {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 1rem;
+      background: #fff;
+      border-radius: 14px;
+      padding: 0.7rem 1.1rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,.1);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      z-index: 3;
+      white-space: nowrap;
+    }
+    .help-quote-card .help-tag-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--sage);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .help-quote-card .help-tag-icon svg {
+      width: 16px;
+      height: 16px;
+      stroke: #5a7d4f;
+      fill: none;
+      stroke-width: 1.8;
+    }
+    .help-quote-card .help-tag-text { line-height: 1.2; }
+    .help-quote-card .help-tag-eyebrow {
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+    }
+    .help-quote-card .help-tag-title {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--dark);
+      display: block;
+    }
+    .help-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem 1.5rem;
+      margin-top: 2rem;
+    }
+    .help-list li {
+      display: flex;
+      gap: 0.65rem;
+      align-items: flex-start;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.93rem;
+    }
+    .help-list svg { width: 17px; height: 17px; stroke: var(--terracota); fill: none; stroke-width: 1.8; flex-shrink: 0; margin-top: 0.15rem; }
+
+    /* ── SPECIALTIES ── */
+    .specialties-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.3rem;
+    }
+    .specialty-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem 1.8rem;
+      transition: transform .25s, box-shadow .25s;
+      position: relative;
+    }
+    .specialty-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(59,31,26,0.08);
+    }
+    .specialty-tag {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+    .specialty-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin-bottom: 0.7rem;
+      line-height: 1.2;
+    }
+    .specialty-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* ── HOME VISIT ── */
+    #domicilio {
+      background: var(--terracota);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    #domicilio::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -100px;
+      width: 380px; height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 65%);
+    }
+    #domicilio .section-inner { position: relative; }
+    .home-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    #domicilio .section-label { color: var(--gold); }
+    #domicilio .section-label::before { background: var(--gold); }
+    #domicilio h2 { color: #fff; }
+    #domicilio h2 em { color: #f0d7c8; }
+    #domicilio .section-intro { color: rgba(255,255,255,0.88); max-width: 520px; }
+    .home-benefits {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .home-benefits li {
+      display: flex;
+      gap: 0.55rem;
+      align-items: flex-start;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.92);
+      padding: 0.45rem 0;
+    }
+    .home-benefits svg { width: 16px; height: 16px; stroke: #f0d7c8; fill: none; stroke-width: 2.2; flex-shrink: 0; margin-top: 0.18rem; }
+    .home-cta {
+      background: #fff;
+      color: var(--dark);
+    }
+    .home-cta:hover { background: #fef9f0; color: var(--dark); }
+    .home-illustration {
+      aspect-ratio: 4/5;
+      max-width: 440px;
+      margin-left: auto;
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(165deg, #F5E6D8 0%, #EDD9C5 60%, #E0C6AE 100%);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.18);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .home-illustration svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .home-illustration .scene-caption {
+      position: absolute;
+      bottom: 1.2rem;
+      left: 1.2rem;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(4px);
+      padding: 0.6rem 0.9rem;
+      border-radius: 12px;
+      font-size: 0.78rem;
+      color: var(--dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .home-illustration .scene-caption svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--terracota);
+      fill: none;
+      stroke-width: 2;
+    }
+
+    /* ── EVALUATION ── */
+    .eval-intro {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 3.5rem;
+      align-items: end;
+      margin-bottom: 3rem;
+    }
+    .eval-panel {
+      background: #fff;
+      border-radius: 28px;
+      padding: 2.8rem;
+      border: 1px solid var(--border);
+    }
+    .eval-panel h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin-bottom: 1.4rem;
+    }
+    .eval-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .eval-chip {
+      padding: 0.6rem 1.1rem;
+      border-radius: 50px;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      font-size: 0.88rem;
+      color: var(--text);
+    }
+    .eval-note {
+      margin-top: 2.2rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .eval-note-icon {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: rgba(194,91,63,0.12);
+      color: var(--terracota);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .eval-note p { font-size: 0.9rem; line-height: 1.6; color: var(--muted); max-width: 720px; }
+    .eval-note strong { color: var(--dark); font-weight: 600; }
+
+    /* ── BENEFITS ── */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.3rem;
+    }
+    .benefit-card {
+      border-radius: 28px;
+      padding: 2.5rem;
+      border: 1px solid var(--border);
+    }
+    .benefit-card.dark {
+      background: var(--dark);
+      color: #fff;
+      border: none;
+    }
+    .benefit-card.light { background: #fff; }
+    .benefit-head {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.6rem;
+    }
+    .benefit-icon {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .benefit-card.light .benefit-icon { background: var(--sage); }
+    .benefit-card.light .benefit-icon svg { stroke: #5a7d4f; }
+    .benefit-card.dark .benefit-icon { background: rgba(240,215,200,0.2); }
+    .benefit-card.dark .benefit-icon svg { stroke: #f0d7c8; }
+    .benefit-icon svg { width: 20px; height: 20px; fill: none; stroke-width: 1.7; }
+    .benefit-head h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      color: inherit;
+    }
+    .benefit-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .benefit-list li { display: flex; gap: 0.65rem; align-items: flex-start; font-size: 0.95rem; }
+    .benefit-list svg { width: 16px; height: 16px; fill: none; stroke-width: 2; flex-shrink: 0; margin-top: 0.18rem; }
+    .benefit-card.light .benefit-list svg { stroke: #5a7d4f; }
+    .benefit-card.dark .benefit-list svg { stroke: #f0d7c8; }
+    .benefit-card.dark .benefit-list li { color: rgba(255,255,255,0.92); }
+
+    /* ── PROCESS ── */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+    }
+    .process-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.7rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .process-num {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 2.5rem;
+      color: var(--terracota);
+      line-height: 1;
+      margin-bottom: 1.2rem;
+      font-weight: 400;
+    }
+    .process-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--dark);
+      margin-bottom: 0.6rem;
+      line-height: 1.2;
+    }
+    .process-card p {
+      font-size: 0.84rem;
+      color: var(--muted);
+      line-height: 1.55;
+      flex: 1;
+    }
+    .process-cta { text-align: center; margin-top: 2.5rem; }
+
+    /* ── ABOUT PROFESSIONAL ── */
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1.05fr 1.2fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-img-wrap { position: relative; }
+    .about-img-wrap img {
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 28px;
+      max-width: 480px;
+    }
+    .about-badge {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 1rem;
+      background: #fff;
+      border-radius: 14px;
+      padding: 0.9rem 1.4rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,.08);
+      border: 1px solid var(--border);
+      text-align: center;
+      white-space: nowrap;
+      z-index: 3;
+    }
+    .about-badge-eyebrow {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+    .about-badge-name {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--dark);
+    }
+    .about-text p { font-size: 1rem; line-height: 1.7; opacity: 0.88; margin-bottom: 1.1rem; }
+    .about-text p strong { color: var(--dark); font-weight: 600; }
+    .about-credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin: 1.7rem 0;
+    }
+    .credential-pill {
+      padding: 0.55rem 1rem;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      font-size: 0.82rem;
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .credential-pill svg { width: 14px; height: 14px; stroke: var(--terracota); fill: none; stroke-width: 2; }
+    .about-quote {
+      margin-top: 1.8rem;
+      padding-left: 1.3rem;
+      border-left: 2px solid var(--terracota);
+    }
+    .about-quote p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      line-height: 1.4;
+      color: var(--dark);
+    }
+
+    /* ── TESTIMONIALS ── */
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.3rem;
+    }
+    .test-card {
+      border-radius: 22px;
+      padding: 2rem 1.8rem;
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+    .test-card.dark {
+      background: var(--dark);
+      color: #fff;
+      border: none;
+    }
+    .test-quote-icon {
+      width: 28px; height: 28px;
+      fill: var(--terracota);
+      opacity: 0.6;
+      margin-bottom: 1rem;
+    }
+    .test-card.dark .test-quote-icon { fill: #f0d7c8; opacity: 0.7; }
+    .test-card p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.02rem;
+      line-height: 1.45;
+      color: inherit;
+    }
+    .test-foot {
+      margin-top: 1.4rem;
+      padding-top: 1.1rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .test-card.dark .test-foot { border-top-color: rgba(255,255,255,0.15); }
+    .test-author {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .test-card.dark .test-author { color: #f0d7c8; }
+    .test-placeholder-badge {
+      font-size: 0.62rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 50px;
+      background: var(--cream);
+      color: var(--muted);
+      text-transform: lowercase;
+      letter-spacing: 0.06em;
+    }
+    .test-card.dark .test-placeholder-badge { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); }
+    .test-disclaimer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ── FAQ ── */
+    #faq .section-inner { max-width: 880px; }
+    .faq-list { display: flex; flex-direction: column; gap: 0.7rem; margin-top: 1rem; }
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .faq-item.open {
+      border-color: rgba(194,91,63,0.35);
+      box-shadow: 0 4px 18px rgba(59,31,26,0.05);
+    }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.08rem;
+      color: var(--dark);
+      line-height: 1.3;
+    }
+    .faq-toggle {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform .25s, background .2s, color .2s;
+      color: var(--dark);
+    }
+    .faq-toggle svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+    .faq-item.open .faq-toggle {
+      background: var(--terracota);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s ease;
+    }
+    .faq-a-inner {
+      padding: 0 1.5rem 1.4rem;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--text);
+      padding-right: 3.5rem;
+    }
+
+    /* ── FINAL CTA ── */
+    #cta-final {
+      padding: 6rem 2rem;
+      background: linear-gradient(180deg, var(--cream) 0%, #f0e6d8 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta-final::before {
+      content: '';
+      position: absolute;
+      top: -200px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(217,164,139,0.4) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    #cta-final .section-inner { max-width: 800px; position: relative; }
+    #cta-final h2 {
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      margin-bottom: 1.5rem;
+    }
+    #cta-final p { font-size: 1.05rem; line-height: 1.7; opacity: 0.85; max-width: 600px; margin: 0 auto 2.5rem; }
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 1.8rem;
+    }
+    .cta-foot {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.75);
+      padding: 4rem 2rem 2rem;
+    }
+    .footer-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.1fr;
+      gap: 3rem;
+    }
+    .footer-brand .logo-mark { width: 42px; height: 42px; }
+    .footer-brand .logo-name { color: #fff; font-size: 1.25rem; }
+    .footer-brand .logo-sub { color: rgba(255,255,255,0.55); }
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-top: 1.2rem;
+      max-width: 320px;
+    }
+    .footer-col h4 {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #f0d7c8;
+      margin-bottom: 1.2rem;
+      font-weight: 600;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-col a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      transition: color .2s;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-col a svg { width: 15px; height: 15px; }
+    .footer-col p { font-size: 0.88rem; line-height: 1.6; }
+    .footer-bottom {
+      max-width: 1140px;
+      margin: 3rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ── FLOATING WHATSAPP ── */
+    .wa-float {
+      position: fixed;
+      bottom: 1.3rem;
+      right: 1.3rem;
+      z-index: 90;
+      background: var(--wa);
+      color: #fff;
+      padding: 0.95rem 1.2rem;
+      border-radius: 50px;
+      box-shadow: 0 12px 30px rgba(37,211,102,0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: transform .2s;
+    }
+    .wa-float:hover { transform: scale(1.04); }
+    .wa-float svg { width: 22px; height: 22px; }
+
+    /* ── MOBILE MENU ── */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: var(--cream);
+      z-index: 110;
+      display: none;
+      flex-direction: column;
+      padding: 1.5rem 2rem 2rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
+    .mobile-menu ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+      margin-bottom: 2rem;
+    }
+    .mobile-menu ul a {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      color: var(--dark);
+      text-decoration: none;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .specialties-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .pain-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .test-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      section { padding: 4rem 1.5rem; }
+      #hero { padding: 3rem 1.5rem 4rem; }
+      nav { padding: 1rem 1.5rem; }
+      .hero-inner, .help-inner, .home-grid, .eval-intro, .benefits-grid, .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .pain-grid, .specialties-grid, .process-grid { grid-template-columns: 1fr; }
+      .help-list, .home-benefits { grid-template-columns: 1fr; }
+      .hero-image-frame { margin: 0 auto; }
+      .hero-quote { left: 0.5rem; }
+      nav ul { display: none; }
+      .menu-toggle { display: inline-flex; }
+      .hero-stats { gap: 1.8rem; }
+      .stat-number { font-size: 1.5rem; }
+      .wa-float span { display: none; }
+      .wa-float { padding: 1rem; }
+      .footer-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .eval-panel { padding: 1.8rem; }
+      .benefit-card { padding: 2rem 1.5rem; }
+      .cta-buttons { flex-direction: column; }
+      .cta-buttons .btn-primary, .cta-buttons .btn-outline { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FAF6F0"/>
+        <stop offset="100%" stop-color="#EDD9C5"/>
+      </linearGradient>
+    </defs>
+    <rect width="200" height="200" fill="url(#bg)"/>
+    <circle cx="100" cy="100" r="48" fill="#C25B3F"/>
+    <text x="100" y="120" font-family="Georgia, serif" font-size="60" font-style="italic" fill="#FFFFFF" text-anchor="middle" font-weight="700">h</text>
+  </svg>
+</template>
+
+<!-- ── HEADER ── -->
+<header>
+  <nav>
+    <a class="logo" href="#top">
+      <span class="logo-mark">h</span>
+      <span class="logo-text">
+        <span class="logo-name">Hervelly Keila</span>
+        <span class="logo-sub">Psicopedagoga Infantil</span>
+      </span>
+    </a>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#especialidades">Especialidades</a></li>
+      <li><a href="#avaliacao">Avaliação</a></li>
+      <li><a href="#processo">Como funciona</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn-primary" href="https://wa.me/558391059563?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento%20psicopedagógico%20infantil." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg>
+    </button>
+  </nav>
+</header>
+
+<!-- ── MOBILE MENU ── -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-head">
+    <span class="logo-name" style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--dark);font-style:italic;">Hervelly Keila</span>
+    <button class="menu-toggle" id="menuClose" aria-label="Fechar menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="#sobre" data-close>Sobre</a></li>
+    <li><a href="#especialidades" data-close>Especialidades</a></li>
+    <li><a href="#avaliacao" data-close>Avaliação</a></li>
+    <li><a href="#processo" data-close>Como funciona</a></li>
+    <li><a href="#faq" data-close>FAQ</a></li>
+  </ul>
+  <a class="btn-primary" href="https://wa.me/558391059563?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento%20psicopedagógico%20infantil." target="_blank" rel="noopener" style="justify-content:center;">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Conversar no WhatsApp
+  </a>
+</div>
+
+<!-- ── HERO ── -->
+<section id="hero" data-screen-label="01 Hero">
+  <a id="top"></a>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="hero-badge">
+        <svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V9.5"/></svg>
+        Psicopedagogia · Atendimento Domiciliar
+      </span>
+      <h1>Acompanhamento psicopedagógico infantil no <span class="highlight">conforto da sua casa.</span></h1>
+      <p class="hero-desc">
+        Atendimento domiciliar para crianças com dificuldades de aprendizagem, atenção, comportamento e desenvolvimento — com olhar especializado para <strong>TEA, TDAH e TOD</strong>.
+      </p>
+      <p class="hero-sub">
+        Um cuidado acolhedor, individualizado e próximo da realidade da criança, ajudando famílias a entenderem melhor os desafios do dia a dia.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn-primary" href="https://wa.me/558391059563?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento%20psicopedagógico%20infantil." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Agendar uma conversa
+        </a>
+        <a class="btn-outline" href="#avaliacao">Conhecer a avaliação</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <span class="stat-number">03 anos</span>
+          <span class="stat-label">de atuação</span>
+        </div>
+        <div>
+          <span class="stat-number">+ famílias</span>
+          <span class="stat-label">acompanhadas</span>
+        </div>
+        <div>
+          <span class="stat-number">TEA · TDAH · TOD</span>
+          <span class="stat-label">olhar especializado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <div class="hero-image-frame">
+        <img src="assets/hervely-sentada.jpeg" alt="Hervelly Keila — Psicopedagoga Infantil" />
+      </div>
+      <div class="hero-tag-card" style="padding: 11px 18px; gap: 2px; width: 1px; height: 56px; text-align: left">
+        <span class="hero-tag-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 20c0-9 7-16 16-16 0 9-7 16-16 16z"/><path d="M4 20l8-8"/></svg>
+        </span>
+        <span class="hero-tag-text">
+          <span class="hero-tag-eyebrow">Especialista</span>
+          <span class="hero-tag-title">TEA · TDAH · TOD</span>
+        </span>
+      </div>
+      <div class="hero-quote">
+        <span class="hero-quote-icon">♡</span>
+        "Acolhimento que faz a diferença para nossa família."
+      </div>
+    </div>
+  </div>
+  <div class="container hero-trust">
+    <span><svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V9.5"/></svg> Atendimento em domicílio</span>
+    <span><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> Olhar individualizado</span>
+    <span><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 21v-1a5 5 0 015-5h2a5 5 0 015 5v1"/></svg> Apoio à família</span>
+    <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Mamanguape · PB</span>
+  </div>
+</section>
+
+<!-- ── DORES ── -->
+<section class="alt" data-screen-label="02 Dores">
+  <div class="section-inner">
+    <div class="section-header" style="max-width:780px;">
+      <span class="section-label">Talvez você reconheça</span>
+      <h2>Seu filho está enfrentando dificuldades para <em>aprender, se concentrar ou lidar com a rotina escolar?</em></h2>
+      <p class="section-intro">Muitas famílias percebem sinais de que a criança precisa de um apoio mais direcionado, mas nem sempre sabem por onde começar.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card"><p>Dificuldade para acompanhar as atividades escolares</p></div>
+      <div class="pain-card"><p>Falta de atenção ou concentração</p></div>
+      <div class="pain-card"><p>Agitação excessiva</p></div>
+      <div class="pain-card"><p>Resistência para estudar ou fazer tarefas</p></div>
+      <div class="pain-card"><p>Dificuldade com leitura, escrita ou matemática</p></div>
+      <div class="pain-card"><p>Baixa autoestima diante dos estudos</p></div>
+      <div class="pain-card"><p>Crises de irritação ou oposição</p></div>
+      <div class="pain-card"><p>Dificuldade em seguir combinados e rotinas</p></div>
+      <div class="pain-card"><p>Necessidade de apoio em casos de TEA, TDAH ou TOD</p></div>
+    </div>
+    <div class="pain-closing">
+      A avaliação e o acompanhamento psicopedagógico ajudam a <strong>compreender essas dificuldades</strong> e construir estratégias mais adequadas para a criança e sua família.
+    </div>
+  </div>
+</section>
+
+<!-- ── COMO AJUDA ── -->
+<section data-screen-label="03 Como ajuda">
+  <div class="section-inner help-inner">
+    <div class="help-img-wrap">
+      <img src="assets/hervely-aponta.jpeg" alt="Hervelly Keila em atendimento" />
+    </div>
+    <div>
+      <span class="section-label">Como a psicopedagogia ajuda</span>
+      <h2>Um olhar cuidadoso para entender <em>como a criança aprende</em>.</h2>
+      <p class="section-intro">A Psicopedagogia Infantil busca compreender a forma como a criança aprende, identifica obstáculos no processo e propõe estratégias que favoreçam seu desenvolvimento — considerando aspectos emocionais, comportamentais, familiares e de rotina.</p>
+      <ul class="help-list">
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="15.5 8.5 11 11 8.5 15.5 13 13"/></svg> Identificar dificuldades de aprendizagem</li>
+        <li><svg viewBox="0 0 24 24"><path d="M4 4.5A2.5 2.5 0 016.5 2H20v18H6.5a2.5 2.5 0 010-5H20"/></svg> Desenvolver estratégias de estudo</li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.6L19.5 10l-5.6 1.4L12 17l-1.9-5.6L4.5 10l5.6-1.4z"/></svg> Estimular autonomia e organização</li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 5a3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 00-2 5 3 3 0 002 5 3 3 0 003 3 3 3 0 003-3V5z"/></svg> Trabalhar atenção, memória e raciocínio</li>
+        <li><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 21v-1a5 5 0 015-5h2a5 5 0 015 5v1"/></svg> Apoiar a família na rotina em casa</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> Favorecer uma relação positiva com o aprender</li>
+        <li><svg viewBox="0 0 24 24"><path d="M4 20c0-9 7-16 16-16 0 9-7 16-16 16z"/><path d="M4 20l8-8"/></svg> Orientar caminhos junto à escola</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── ESPECIALIDADES ── -->
+<section id="especialidades" class="alt" data-screen-label="04 Especialidades">
+  <div class="section-inner">
+    <div class="section-header" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end;">
+      <div>
+        <span class="section-label">Especialidades</span>
+        <h2>Atendimento <em>especializado</em> para crianças e famílias.</h2>
+      </div>
+      <p class="section-intro">Cada criança tem seu próprio ritmo, suas necessidades e sua maneira de se desenvolver. Por isso, o atendimento é planejado de forma individualizada.</p>
+    </div>
+    <div class="specialties-grid">
+      <article class="specialty-card">
+        <span class="specialty-tag" style="background:var(--sage);color:#5a7d4f;">TEA</span>
+        <h3>Transtorno do Espectro Autista</h3>
+        <p>Acompanhamento com foco em estratégias de aprendizagem, rotina, comunicação, autonomia e adaptação às necessidades da criança.</p>
+      </article>
+      <article class="specialty-card">
+        <span class="specialty-tag" style="background:#FAEBD7;color:var(--terracota);">TDAH</span>
+        <h3>Déficit de Atenção e Hiperatividade</h3>
+        <p>Apoio para organização, concentração, planejamento, autorregulação e desenvolvimento de estratégias para o estudo e a rotina escolar.</p>
+      </article>
+      <article class="specialty-card">
+        <span class="specialty-tag" style="background:var(--lilac);color:#6b4a73;">TOD</span>
+        <h3>Transtorno Opositivo Desafiador</h3>
+        <p>Orientação e acompanhamento para lidar com desafios comportamentais, combinados, limites, rotina e relação familiar.</p>
+      </article>
+      <article class="specialty-card">
+        <span class="specialty-tag" style="background:var(--babyblue);color:#3d5a73;">DA</span>
+        <h3>Dificuldades de aprendizagem</h3>
+        <p>Avaliação e intervenção para crianças com dificuldades em leitura, escrita, matemática, memória ou desempenho escolar.</p>
+      </article>
+      <article class="specialty-card">
+        <span class="specialty-tag" style="background:#f0d7c8;color:var(--terracota);">OF</span>
+        <h3>Orientação familiar</h3>
+        <p>Apoio aos pais e responsáveis para compreender melhor as necessidades da criança e aplicar estratégias práticas no dia a dia.</p>
+      </article>
+      <article class="specialty-card">
+        <span class="specialty-tag" style="background:#fef6df;color:#9c7a1a;">AV</span>
+        <h3>Avaliação psicopedagógica</h3>
+        <p>Processo cuidadoso para compreender como a criança aprende e identificar caminhos para favorecer seu desenvolvimento.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── DOMICILIAR ── -->
+<section id="domicilio" data-screen-label="05 Domicilio">
+  <div class="section-inner">
+    <div class="home-grid">
+      <div>
+        <span class="section-label">Atendimento em domicílio</span>
+        <h2>Mais conforto para a criança, mais <em>proximidade com a família</em>.</h2>
+        <p class="section-intro">O atendimento domiciliar permite que a criança seja acompanhada em um ambiente familiar, seguro e acolhedor. Além do conforto, esse formato possibilita observar de perto a rotina, os hábitos e as necessidades reais da criança dentro de casa.</p>
+        <ul class="home-benefits">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Mais comodidade para a família</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Ambiente conhecido e acolhedor</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Redução de deslocamentos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Proximidade com a rotina familiar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Estratégias conectadas ao dia a dia</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Participação ativa dos responsáveis</li>
+        </ul>
+        <a class="btn-primary home-cta" href="https://wa.me/558391059563?text=Olá,%20gostaria%20de%20saber%20se%20o%20atendimento%20domiciliar%20é%20indicado%20para%20meu%20filho." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Quero saber se é indicado para meu filho
+        </a>
+      </div>
+      <div class="home-illustration" role="img" aria-label="Ilustração de ambiente acolhedor de atendimento em casa">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <!-- Floor -->
+          <rect x="0" y="360" width="400" height="140" fill="#C9A988"/>
+          <rect x="0" y="360" width="400" height="6" fill="#B89572" opacity="0.6"/>
+          <!-- Wall warm wash -->
+          <rect x="0" y="0" width="400" height="360" fill="url(#wall)"/>
+          <defs>
+            <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FAEBD7"/>
+              <stop offset="100%" stop-color="#EDD3B8"/>
+            </linearGradient>
+            <linearGradient id="window" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FFF6E5"/>
+              <stop offset="100%" stop-color="#FFE4B8"/>
+            </linearGradient>
+          </defs>
+          <!-- Window frame -->
+          <rect x="50" y="50" width="170" height="210" rx="6" fill="#FFFFFF" stroke="#A8845A" stroke-width="4"/>
+          <rect x="58" y="58" width="154" height="194" fill="url(#window)"/>
+          <line x1="135" y1="58" x2="135" y2="252" stroke="#A8845A" stroke-width="3"/>
+          <line x1="58" y1="155" x2="212" y2="155" stroke="#A8845A" stroke-width="3"/>
+          <!-- Sun in window -->
+          <circle cx="170" cy="110" r="22" fill="#F5C770" opacity="0.85"/>
+          <!-- Curtain hint -->
+          <rect x="42" y="46" width="12" height="218" fill="#C25B3F" opacity="0.7" rx="2"/>
+          <rect x="216" y="46" width="12" height="218" fill="#C25B3F" opacity="0.7" rx="2"/>
+          <!-- Plant pot on right -->
+          <rect x="280" y="260" width="70" height="60" rx="6" fill="#C25B3F"/>
+          <rect x="280" y="260" width="70" height="10" fill="#A84A32"/>
+          <!-- Plant leaves (stylized rounded shapes) -->
+          <ellipse cx="300" cy="230" rx="18" ry="34" fill="#7B9B6A" transform="rotate(-22 300 230)"/>
+          <ellipse cx="330" cy="215" rx="16" ry="38" fill="#5A7D4F"/>
+          <ellipse cx="345" cy="235" rx="15" ry="30" fill="#7B9B6A" transform="rotate(22 345 235)"/>
+          <!-- Rug -->
+          <ellipse cx="200" cy="440" rx="170" ry="32" fill="#E8A87A" opacity="0.6"/>
+          <ellipse cx="200" cy="440" rx="130" ry="22" fill="#C25B3F" opacity="0.4"/>
+          <!-- Low table -->
+          <rect x="110" y="360" width="180" height="14" rx="3" fill="#8B5E3C"/>
+          <rect x="118" y="374" width="8" height="40" fill="#6B4423"/>
+          <rect x="274" y="374" width="8" height="40" fill="#6B4423"/>
+          <!-- Books on table -->
+          <rect x="130" y="335" width="60" height="10" rx="1" fill="#6B4A73"/>
+          <rect x="132" y="325" width="56" height="10" rx="1" fill="#C9A84C"/>
+          <rect x="128" y="345" width="64" height="15" rx="1" fill="#3D5A73"/>
+          <!-- Toy block tower -->
+          <rect x="220" y="340" width="22" height="20" rx="2" fill="#E8A87A"/>
+          <rect x="223" y="320" width="22" height="20" rx="2" fill="#7B9B6A"/>
+          <rect x="226" y="300" width="22" height="20" rx="2" fill="#C25B3F"/>
+          <!-- Small wall picture frame -->
+          <rect x="260" y="100" width="60" height="75" rx="3" fill="#FFFFFF" stroke="#A8845A" stroke-width="3"/>
+          <circle cx="290" cy="130" r="10" fill="#F5C770"/>
+          <path d="M 268 165 Q 285 150, 295 158 T 312 165 L 312 172 L 268 172 Z" fill="#7B9B6A"/>
+          <!-- Cushion on floor -->
+          <ellipse cx="90" cy="415" rx="45" ry="18" fill="#EDC9A8"/>
+          <ellipse cx="90" cy="410" rx="45" ry="18" fill="#E8A87A"/>
+          <!-- Soft light spots -->
+          <circle cx="60" cy="40" r="60" fill="#FFFFFF" opacity="0.18"/>
+          <circle cx="360" cy="60" r="90" fill="#FFFFFF" opacity="0.12"/>
+        </svg>
+        <span class="scene-caption">
+          <svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V9.5"/></svg>
+          Ambiente acolhedor de atendimento
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AVALIAÇÃO ── -->
+<section id="avaliacao" data-screen-label="06 Avaliacao">
+  <div class="section-inner">
+    <div class="eval-intro">
+      <div>
+        <span class="section-label">Avaliação psicopedagógica</span>
+        <h2>Entender as reais <em>necessidades</em> da criança.</h2>
+      </div>
+      <p class="section-intro">A avaliação psicopedagógica é um processo cuidadoso que busca compreender <strong>como a criança aprende</strong>, quais dificuldades apresenta e quais caminhos podem favorecer seu desenvolvimento. Pode auxiliar famílias e escolas a identificarem fatores que impactam aprendizado, atenção, comportamento e autonomia.</p>
+    </div>
+    <div class="eval-panel">
+      <h3>A avaliação pode observar:</h3>
+      <div class="eval-chips">
+        <span class="eval-chip">Leitura</span>
+        <span class="eval-chip">Escrita</span>
+        <span class="eval-chip">Raciocínio lógico</span>
+        <span class="eval-chip">Matemática</span>
+        <span class="eval-chip">Atenção</span>
+        <span class="eval-chip">Memória</span>
+        <span class="eval-chip">Organização</span>
+        <span class="eval-chip">Comportamento diante das tarefas</span>
+        <span class="eval-chip">Relação com o aprendizado</span>
+        <span class="eval-chip">Aspectos emocionais ligados à aprendizagem</span>
+      </div>
+      <div class="eval-note">
+        <span class="eval-note-icon">!</span>
+        <p><strong>Importante:</strong> a avaliação psicopedagógica não substitui avaliação médica, psicológica ou neuropsicológica, mas pode complementar o olhar sobre a criança e orientar estratégias educacionais e familiares.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BENEFÍCIOS ── -->
+<section class="alt" data-screen-label="07 Beneficios">
+  <div class="section-inner">
+    <div class="section-header" style="max-width:760px;">
+      <span class="section-label">Benefícios</span>
+      <h2>Mais clareza, direção e apoio para a <em>jornada da criança</em>.</h2>
+      <p class="section-intro">Quando a família entende melhor as dificuldades da criança, torna-se possível agir com mais segurança, paciência e estratégia.</p>
+    </div>
+    <div class="benefits-grid">
+      <article class="benefit-card light">
+        <div class="benefit-head">
+          <span class="benefit-icon">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </span>
+          <h3>Para a criança</h3>
+        </div>
+        <ul class="benefit-list">
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Mais confiança para aprender</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Melhor relação com os estudos</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Desenvolvimento de autonomia</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Apoio nas dificuldades escolares</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Estratégias adequadas ao seu ritmo</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Fortalecimento da autoestima</li>
+        </ul>
+      </article>
+      <article class="benefit-card dark">
+        <div class="benefit-head">
+          <span class="benefit-icon">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 21v-1a5 5 0 015-5h2a5 5 0 015 5v1"/><path d="M14 21v-.5a4 4 0 014-4h1a3 3 0 013 3v1.5"/></svg>
+          </span>
+          <h3>Para a família</h3>
+        </div>
+        <ul class="benefit-list">
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Mais clareza sobre os desafios da criança</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Orientações práticas para a rotina</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Menos desgaste nos momentos de estudo</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Apoio para lidar com comportamento e organização</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Caminhos mais claros para conversar com a escola</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESSO ── -->
+<section id="processo" data-screen-label="08 Processo">
+  <div class="section-inner">
+    <div class="section-header" style="max-width:720px;">
+      <span class="section-label">Como funciona</span>
+      <h2>O processo do acompanhamento, <em>passo a passo</em>.</h2>
+    </div>
+    <div class="process-grid">
+      <article class="process-card">
+        <span class="process-num">01</span>
+        <h3>Conversa inicial</h3>
+        <p>Primeira conversa com a família para entender as queixas, histórico, rotina, escola e necessidades atuais.</p>
+      </article>
+      <article class="process-card">
+        <span class="process-num">02</span>
+        <h3>Avaliação</h3>
+        <p>Atividades e observações para compreender como a criança aprende, se organiza e lida com desafios.</p>
+      </article>
+      <article class="process-card">
+        <span class="process-num">03</span>
+        <h3>Plano individualizado</h3>
+        <p>Plano de acompanhamento construído com base nas necessidades identificadas, com objetivos e estratégias claras.</p>
+      </article>
+      <article class="process-card">
+        <span class="process-num">04</span>
+        <h3>Atendimento em casa</h3>
+        <p>Encontros realizados no domicílio, respeitando o ritmo da criança e envolvendo a família quando necessário.</p>
+      </article>
+      <article class="process-card">
+        <span class="process-num">05</span>
+        <h3>Orientação familiar</h3>
+        <p>Orientações para aplicar estratégias no dia a dia e fortalecer o desenvolvimento da criança em casa.</p>
+      </article>
+    </div>
+    <div class="process-cta">
+      <a class="btn-primary" href="https://wa.me/558391059563?text=Olá,%20gostaria%20de%20agendar%20a%20conversa%20inicial." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Agendar conversa inicial
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOBRE A PROFISSIONAL ── -->
+<section id="sobre" class="alt" data-screen-label="09 Sobre">
+  <div class="section-inner about-inner">
+    <div class="about-img-wrap">
+      <img src="assets/hervely-retrato.jpeg" alt="Retrato de Hervelly Keila" />
+      <div class="about-badge">
+        <div class="about-badge-eyebrow">A profissional</div>
+        <div class="about-badge-name">Hervelly Keila</div>
+      </div>
+    </div>
+    <div class="about-text">
+      <span class="section-label">Sobre mim</span>
+      <h2>Um atendimento acolhedor, técnico e <em>individualizado</em>.</h2>
+      <p>Sou <strong>Hervelly Keila</strong>, Psicopedagoga Infantil especializada no atendimento de crianças com dificuldades de aprendizagem, atenção e comportamento — com foco em <strong>TEA, TDAH e TOD</strong>.</p>
+      <p>Meu trabalho é ajudar crianças e famílias a compreenderem melhor os desafios do processo de aprendizagem, criando estratégias práticas, respeitosas e personalizadas.</p>
+      <p>Acredito que cada criança aprende de uma forma — e que o cuidado precisa considerar sua história, sua rotina, sua família e suas potencialidades.</p>
+
+      <div class="about-credentials">
+        <span class="credential-pill"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 03 anos de atuação</span>
+        <span class="credential-pill"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Atendimento domiciliar</span>
+        <span class="credential-pill"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Mamanguape · PB</span>
+      </div>
+
+      <div class="about-quote">
+        <p>"Meu objetivo é acolher a criança, orientar a família e construir caminhos possíveis para uma aprendizagem mais leve e significativa."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DEPOIMENTOS ── -->
+<section data-screen-label="10 Depoimentos">
+  <div class="section-inner">
+    <div class="section-header" style="max-width:680px;">
+      <span class="section-label">Famílias atendidas</span>
+      <h2>Famílias que encontraram <em>apoio e orientação</em>.</h2>
+    </div>
+    <div class="test-grid">
+      <article class="test-card dark">
+        <svg class="test-quote-icon" viewBox="0 0 24 24"><path d="M9 7H5a2 2 0 00-2 2v4a2 2 0 002 2h2v3a4 4 0 01-2 3.5L6 22a6 6 0 003-5V9a2 2 0 00-2-2zm12 0h-4a2 2 0 00-2 2v4a2 2 0 002 2h2v3a4 4 0 01-2 3.5l1 1.5a6 6 0 003-5V9a2 2 0 00-2-2z"/></svg>
+        <p>"Depois do acompanhamento, conseguimos entender melhor as dificuldades do nosso filho e aplicar estratégias em casa com mais segurança."</p>
+        <div class="test-foot">
+          <span class="test-author">Família atendida</span>
+        </div>
+      </article>
+      <article class="test-card">
+        <svg class="test-quote-icon" viewBox="0 0 24 24"><path d="M9 7H5a2 2 0 00-2 2v4a2 2 0 002 2h2v3a4 4 0 01-2 3.5L6 22a6 6 0 003-5V9a2 2 0 00-2-2zm12 0h-4a2 2 0 00-2 2v4a2 2 0 002 2h2v3a4 4 0 01-2 3.5l1 1.5a6 6 0 003-5V9a2 2 0 00-2-2z"/></svg>
+        <p style="opacity:0.75;">"O atendimento em casa fez toda a diferença. Nossa criança ficou mais à vontade e o progresso veio com naturalidade."</p>
+        <div class="test-foot">
+          <span class="test-author">Espaço para depoimento</span>
+          <span class="test-placeholder-badge">reservado</span>
+        </div>
+      </article>
+      <article class="test-card">
+        <svg class="test-quote-icon" viewBox="0 0 24 24"><path d="M9 7H5a2 2 0 00-2 2v4a2 2 0 002 2h2v3a4 4 0 01-2 3.5L6 22a6 6 0 003-5V9a2 2 0 00-2-2zm12 0h-4a2 2 0 00-2 2v4a2 2 0 002 2h2v3a4 4 0 01-2 3.5l1 1.5a6 6 0 003-5V9a2 2 0 00-2-2z"/></svg>
+        <p style="opacity:0.75;">"A orientação para nossa rotina foi prática e respeitosa. Sentimos um apoio real desde a primeira conversa."</p>
+        <div class="test-foot">
+          <span class="test-author">Espaço para depoimento</span>
+          <span class="test-placeholder-badge">reservado</span>
+        </div>
+      </article>
+    </div>
+    <p class="test-disclaimer">Depoimentos publicados apenas com autorização das famílias.</p>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq" class="alt" data-screen-label="11 FAQ">
+  <div class="section-inner">
+    <div class="section-header center">
+      <span class="section-label">Perguntas frequentes</span>
+      <h2>Tudo o que você precisa <em>saber</em>.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q" type="button">
+          <span>A psicopedagoga faz diagnóstico de TEA, TDAH ou TOD?</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Não. O diagnóstico deve ser realizado por profissionais habilitados, como médicos, psicólogos ou equipe multidisciplinar. A Psicopedagogia atua na avaliação e no acompanhamento das dificuldades de aprendizagem, comportamento e rotina educacional.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>O atendimento é apenas para crianças com diagnóstico?</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Não. O atendimento também é indicado para crianças com dificuldades escolares, falta de concentração, desorganização, baixa autoestima nos estudos ou resistência às tarefas — mesmo sem diagnóstico fechado.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Como funciona o atendimento domiciliar?</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">A profissional vai até a casa da família em dias e horários combinados. O atendimento acontece em ambiente familiar, com atividades direcionadas às necessidades da criança.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>A família participa do processo?</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Sim. A participação da família é muito importante. Os responsáveis recebem orientações para apoiar a criança também fora dos atendimentos.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>A avaliação psicopedagógica substitui avaliação médica ou psicológica?</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Não. A avaliação psicopedagógica tem foco na aprendizagem e pode complementar outros acompanhamentos, mas não substitui avaliações médicas, psicológicas ou neuropsicológicas.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Quantas sessões são necessárias?</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Depende das necessidades da criança. Após a conversa inicial e a avaliação, é possível indicar um plano de acompanhamento mais adequado.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA FINAL ── -->
+<section id="cta-final" data-screen-label="12 CTA Final">
+  <div class="section-inner">
+    <span class="section-label" style="justify-content:center;">Vamos conversar</span>
+    <h2>Seu filho não precisa enfrentar essas dificuldades <em>sozinho</em>.</h2>
+    <p>Com acolhimento, estratégia e acompanhamento adequado, é possível compreender melhor os desafios da criança e construir uma rotina de aprendizagem mais leve para toda a família.</p>
+    <div class="cta-buttons">
+      <a class="btn-primary" href="https://wa.me/558391059563?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento%20psicopedagógico%20infantil." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+      <a class="btn-outline" href="#processo">Ver como funciona</a>
+    </div>
+    <p class="cta-foot">Atendimento psicopedagógico infantil em domicílio para crianças e famílias.</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <span class="logo-mark">h</span>
+        <span class="logo-text">
+          <span class="logo-name">Hervelly Keila</span>
+          <span class="logo-sub">Psicopedagoga Infantil</span>
+        </span>
+      </div>
+      <p>Avaliação e acompanhamento psicopedagógico em domicílio para crianças com dificuldades de aprendizagem, atenção, comportamento, TEA, TDAH e TOD.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#avaliacao">Avaliação</a></li>
+        <li><a href="#processo">Como funciona</a></li>
+        <li><a href="#faq">Perguntas frequentes</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li>
+          <a href="https://wa.me/558391059563?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento%20psicopedagógico%20infantil." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            (83) 9105-9563
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/psico.hervelly_keila2" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            @psico.hervelly_keila2
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Atendimento</h4>
+      <p>Rua Joaquim Pinto de Almeida, 40<br/>Mamanguape · PB</p>
+      <p style="margin-top:0.9rem;">Atendimento domiciliar com horários combinados conforme a rotina da família.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Hervelly Keila · Psicopedagogia Infantil</span>
+    <span>Linguagem responsável · não realizamos diagnósticos médicos</span>
+  </div>
+</footer>
+
+<!-- ── FLOATING WHATSAPP ── -->
+<a class="wa-float" href="https://wa.me/558391059563?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento%20psicopedagógico%20infantil." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Conversar agora</span>
+</a>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        const a = item.querySelector('.faq-a');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+  // Open first FAQ on load
+  const firstOpen = document.querySelector('.faq-item.open .faq-a');
+  if (firstOpen) firstOpen.style.maxHeight = firstOpen.scrollHeight + 'px';
+
+  // Mobile menu
+  const menu = document.getElementById('mobileMenu');
+  document.getElementById('menuToggle').addEventListener('click', () => menu.classList.add('open'));
+  document.getElementById('menuClose').addEventListener('click', () => menu.classList.remove('open'));
+  menu.querySelectorAll('[data-close]').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+</script>
+
+</body>
+</html>
