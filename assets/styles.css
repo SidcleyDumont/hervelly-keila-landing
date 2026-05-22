@@ -942,6 +942,7 @@ footer {
 
   .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
   .hero-image-frame { max-width: 380px; margin: 3.5rem auto 0; }
+  .hero-tag-card { display: none; } /* evita overflow em mobile/tablet */
   .hero-quote { left: 0.5rem; bottom: 1.5rem; }
 
   .help-inner { grid-template-columns: 1fr; gap: 3rem; }
