@@ -755,6 +755,10 @@ h2 em { font-weight: 400; color: var(--terracota); }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.3rem;
+  justify-items: center;
+}
+.test-grid:has(> :only-child) {
+  grid-template-columns: minmax(0, 560px);
 }
 .test-card { border-radius: 22px; padding: 2rem 1.8rem; border: 1px solid var(--border); background: #fff; }
 .test-card.dark { background: var(--dark); color: #fff; border: none; }
